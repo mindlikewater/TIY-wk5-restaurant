@@ -1,4 +1,62 @@
 
+* {
+  margin:0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  height: 150px;
+  border-bottom: 3px solid green;
+  // background-color: lightseagreen;
+  padding-left:40px;
+  padding-right:40px;
+
+}
+
+  .logoBox {
+    height:120px;
+    width: 200px;
+    border:1px solid blue;
+    // display: block;
+    margin:0;
+    padding:0px;
+    float: left;
+    background-color:white;
+    margin-top:15px;
+
+  }
+      img.logo {
+      height: auto;
+      width: 200px;
+      border: none;
+      position: absolute;
+    }
+      .logoText {
+      color: #4dbfef;
+      font-size:22px;
+      font-weight: bolder;
+      position: relative;
+      line-height: 5.4;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    .sMediaBox {
+      height:75px;
+      width: 200px;
+      border:1px solid blue;
+      background-color:#f5f5f5;
+      // display: block;
+      margin:0;
+      float: right;
+      margin-top:25px;
+      padding:0px;
+      padding-top:27px;
+      padding-left:30px;
+    }
 
 
 
@@ -7,12 +65,12 @@
 
 
 
-
-
-
-
-
+footer {
+  height:50px;
+  background-color: lightseagreen;
+  color:white;
+}
 
 footer :after {
-  content:" \00a9  2016 el Restaurante ";
+  content:" \00a9 2016 el Restaurante ";
 }
