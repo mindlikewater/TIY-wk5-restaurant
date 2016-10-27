@@ -1,3 +1,14 @@
+@import url(http://weloveiconfonts.com/api/?family=brandico|entypo|zocial);
+
+@mixin icon ($size){
+    color:white;
+    height: $size;
+    width: $size;
+    background-color:black;
+    border:none;
+    border-radius: 4px;
+}
+
 
 * {
   margin:0;
@@ -8,20 +19,21 @@ body {
   height: 100%;
   width: 100%;
 }
+.container {
+  // width: 1000px;
+}
 
 nav {
-  height: 150px;
-  border-bottom: 3px solid green;
-  // background-color: lightseagreen;
+  height: 140px;
   padding-left:40px;
   padding-right:40px;
 
 }
 
   .logoBox {
-    height:120px;
-    width: 200px;
-    border:1px solid blue;
+    height:115px;
+    width: 210px;
+    border:1px solid lightblue;
     // display: block;
     margin:0;
     padding:0px;
@@ -40,37 +52,175 @@ nav {
       color: #4dbfef;
       font-size:22px;
       font-weight: bolder;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       position: relative;
       line-height: 5.4;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      text-align: center;
     }
+
     .sMediaBox {
       height:75px;
       width: 200px;
-      border:1px solid blue;
+      border:1px solid lightgreen;
       background-color:#f5f5f5;
-      // display: block;
-      margin:0;
+      // line-height: 50px;
       float: right;
-      margin-top:25px;
-      padding:0px;
-      padding-top:27px;
-      padding-left:30px;
+      margin-top:35px;
+      text-align: center;
+    }
+      .socialMediaText {
+        font: 15px bold black;
+        line-height: 2;
+
+      }
+      .mediaIcons {
+        // height:auto;
+        // width:5px;
+        // line-height: 3;
+      }
+
+          /* entypo/Facebook */
+          .entypo-facebook:before {
+            font-family: 'entypo', sans-serif;
+          }
+
+          /* zocial /Twitter */
+          .zocial-twitter:before {
+            font-family: 'zocial', sans-serif;
+          }
+          /* brandico /Instagram*/
+          .brandico-instagram:before {
+            font-family: 'brandico', sans-serif;
+          }
+
+          button.entypo-facebook {
+            @include icon (32px)
+          }
+          button.zocial-twitter {
+            @include icon (32px)
+          }
+          button.brandico-instagram {
+            @include icon (32px)
+          }
+
+
+.middleSection::before {
+    background: lightgrey;
+    content: "";
+    display: block;
+    height: 1px;
+}
+
+.middleSection {
+  margin-left: 40px;
+  margin-right:40px;
+}
+
+  //restarant picture
+    .restaurantImageBox {
+      width:700px;
+      height:auto;
+      margin-top: 20px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+      .restaurantImageBox img {
+        width: 100%;
+        height: 100%;
+      }
+
+    //Box 4 + 5 + 6 : Three Middleboxes below Image/
+    //stationary
+    .threeMidBoxes {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .latestNews {
+      border:1px solid grey;
+      width:325px;
+      min-height:240px;
+      margin-right: 15px;
+      font: 25px bold black;
+      text-align: center;
+    }
+    .specials {
+      border:1px solid grey;
+      width:325px;
+      min-height:240px;
+      margin-right: 15px;
+      font: 25px bold black;
+      text-align: center;
+    }
+    .map {
+      border:1px solid grey;
+      width:325px;
+      min-height:240px;
+      font: 25px bold black;
+      text-align: center;
     }
 
 
+//Lower Section
+.lowerSection {
+  margin-left:40px;
+  margin-right:40px;
+  margin-top:20px
+}
+  .lowerSectionBoxes {
+    display: flex;
+    justify-content: center;
+  }
 
+    .tabs {
+      border: 1px solid lightgrey;
+      margin-left:40px;
+      margin-right:20px;
+      width:800px;
+      min-height:500px;
+    }
+      .storyTab {
+        font: 25px bold black;
+        text-align: center;
+      }
+      .menuTab  {
+        font: 25px bold black;
+        text-align: center;
+      }
+      .reservationsTab {
+        font: 25px bold black;
+        text-align: center;
+      }
+    .photoSection {
+      width:250px;
+      margin-right:40px;
+      border:1px solid lightgrey;
+    }
 
-
-
-
+//footer (of course)
+footer::before {
+    background: lightgrey;
+    content: "";
+    display: block;
+    height: 2px;
+    }
 
 footer {
+  margin-left:40px;
+  margin-right:40px;
   height:50px;
-  background-color: lightseagreen;
-  color:white;
-}
+  // background-color: lightseagreen;
+  color:red;
+  font-size: 11px;
+  margin-top: 11px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 200;
+  line-height: 4;
+  }
 
-footer :after {
-  content:" \00a9 2016 el Restaurante ";
+
+
+footer ::after {
+  content:"\00a9 2016 el Restaurante";
 }
