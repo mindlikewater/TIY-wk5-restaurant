@@ -11,15 +11,19 @@ function extractData (data) {
   var entree = data.entrees;
   var game = data.games;
 
-  return {
+  var barMenu = {
     beer: beer,
     entree: entree,
     game: game
   }
+
+  console.log(barMenu);
+  return barMenu;
 };
 
 function getBarData() {
   return requestData().then(extractData);
 };
+
 
 export { getBarData };
