@@ -1,4 +1,5 @@
 import $ from "jquery";
+import { mapHTML } from "./map";
 
 import { getNewsData } from "./news";
 import { getBarData } from "./menu";
@@ -11,3 +12,13 @@ function displayNews () {
 
   $(".box4").innerHTML(newsHTML);
 };
+
+
+
+
+
+
+ var map = $(".box6");
+// console.log(map);
+// conosole.log(mapHTML);
+ map.html(mapHTML);
