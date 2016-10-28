@@ -5,14 +5,17 @@ import { mapHTML } from "./map";
 import { getNewsData } from "./news";
 import { allDrinksTemplate } from "./template";
 //import { getBarData } from "./menu";
-
+/////////////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////
 
 //get news data from AJAX request
-function displayNews () {
-  var newsHTML = newsTemplate(getNewsData);
+getNewsData();
 
-  $(".box4").innerHTML(newsHTML);
-};
+
+
+
+
 
 
 //variable holds box where map is located on the page
