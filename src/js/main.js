@@ -21,7 +21,7 @@ function displayNews () {
 //puts map html on the page
  map.html(mapHTML);
 
-/*
+
 //send request to flickr's api
 function getImages () {
   var flickr = $.ajax({
@@ -31,6 +31,7 @@ function getImages () {
       method: "flickr.photos.getInfo",
       api_key: FLICKR_ID,
       format: "json",
+      nojsoncallback: 1,
       photo_id: 30574698245
    }
   });
@@ -39,6 +40,7 @@ function getImages () {
 
 getImages();
 
+/*
 function reqFlickrData (data) {
  //loop through the results with the following function
  $.each(data.photoset.photo, function(i,item) {
@@ -71,18 +73,42 @@ function extractData (data) {
   }
 
   console.log(barMenu);
-  console.log(beer);
+  //console.log(beer);
 
   beer.forEach(function (beer) {
     var beerHTML =
-    `<div class="menuItem" id=${beer.id}>
-      <div class="beer">Beer: ${beer.item}> (${beer.abv}% ABV) - ${beer.style}</div>
+    `<div class="menuItem" id=${beer.id} data-allergies=${beer.allergies} data-favorite=${beer.favorite} data-bottle=${beer.bottle} data-draught=${beer.draught}>
+      <div class="beer">Beer: ${beer.item} (${beer.abv}% ABV) - ${beer.style}</div>
       <div class="description">Description: ${beer.description}</div>
       <div class="price">$${beer.price}</div>
     </div>`;
 
-    console.log(beerHTML);
+    //console.log(beerHTML);
     $(".menuTab").append(beerHTML);
+  });
+
+  entree.forEach(function (entree) {
+    var entreeHTML =
+    `<div class="menuItem" id=${entree.id} data-allergies=${entree.allergies} data-favorite=${entree.favorite} data-spicy=${entree.spicy} data-vegan=${entree.vegan}>
+      <div class="food">Entree: ${entree.item}</div>
+      <div class="description">Description: ${entree.description}</div>
+      <div class="price">$${entree.price}</div>
+    </div>`;
+
+    //console.log(entreeHTML);
+    $(".menuTab").append(entreeHTML);
+  });
+
+  game.forEach(function (game) {
+    var gameHTML =
+    `<div class="menuItem" id=${game.id} data-favorite=${game.favorite} data-online=${game.online} data-multiplayer=${game.multiplayer}>
+      <div class="games">Games: ${game.item}</div>
+      <div class="description">Description: ${game.description}</div>
+      <div class="description">Console/Device: ${game.platform} Rated: ${game.rating}</div>
+      <div class="price">$${game.price}</div>
+    </div>`;
+
+    $(".menuTab").append(gameHTML);
   });
 };
 
