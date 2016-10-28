@@ -136,16 +136,46 @@ header {
       display: flex;
       justify-content: center;
       margin-top: 10px;
+
+      h1 {
+        font-size: 1em;
+      }
+      .newsTitle {
+        font-weight: bold;
+        font-size:1em;
+
+        span {
+          padding-left:18px;
+        }
+      }
+      .blog {
+        font-size:12px;
+      }
+
     }
-//ourStory
+
+
+
+//ourStory / Menu / Reservations
     .box4, .box5 , .box6 {
       border:1px solid grey;
       width:325px;
       min-height:240px;
       margin-right: 15px;
-      font: 25px bold black;
       text-align: center;
     }
+      // h7-1, h7-2, h7-3, h7-4 {
+      //   font: 25px bold black;
+      // }
+
+      .menuTab, .storyTab {
+        font-size: 10px;
+      }
+
+      .storyTab {
+        font-size: 10px;
+      }
+
 
 //Lower Section
 .lower {
