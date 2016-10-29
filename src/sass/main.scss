@@ -22,6 +22,8 @@ body {
 }
 .container {
   // width: 1000px;
+  background: rgba(192,192,192, 0.6);
+  margin: 5% 5%;
 }
 
 header {
@@ -55,10 +57,10 @@ header {
       position: absolute;
     }
       .logoText {
-      color: #4dbfef;
+      color: rgb(170,0,0);
       font-size:22px;
       font-weight: bolder;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      text-shadow: -1px 0 rgb(71,0,0), 0 1px rgb(71,0,0), 1px 0 rgb(71,0,0), 0 -1px rgb(71,0,0);
       position: relative;
       line-height: 5.4;
       text-align: center;
