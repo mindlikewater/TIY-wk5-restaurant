@@ -15,46 +15,49 @@ getNewsData();
 
 
 
-
 //variable holds box where map is located on the page
  var map = $(".box6");
 
 //puts map html on the page
  map.html(mapHTML);
 
+//var dailySpecial = [8740955374];
+var photoIDs = [5204333727, 25743961882, 6550198427, 1448346141, 3590345198, 2789016307];
+
+//dailySpecial.forEach(getImages);
+photoIDs.forEach(getImages);
+
+function picTemplate (pic) {
+  //console.log(pic);
+  var picSize = pic.sizes.size[3].source;
+  //console.log(picSize);
+
+  var picHTML = `<img src="${picSize}">`;
+
+  //console.log(picHTML);
+  $(".box8").append(picHTML);
+};
+
+//getImageURL();
 
 //send request to flickr's api
-function getImages () {
+function getImages (imageId) {
   var flickr = $.ajax({
     url: `https://api.flickr.com/services/rest/`,
 
     data: {
-      method: "flickr.photos.getInfo",
+      method: "flickr.photos.getSizes",
       api_key: FLICKR_ID,
       format: "json",
       nojsoncallback: 1,
-      photo_id: 30574698245
+      photo_id: imageId
    }
   });
-  flickr.then(console.log);
+  flickr.then(picTemplate);
 };
 
+//calls function to get flickr images data
 getImages();
-
-/*
-function reqFlickrData (data) {
- //loop through the results with the following function
- $.each(data.photoset.photo, function(i,item) {
-
-     //build the url of the photo in order to link to it
-     var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
-
-     //turn the photo id into a variable
-     var photoID = item.id;
-   });
-};
-Need to re-write this and test for our data
-*/
 
 function reqData () {
   return $.ajax({
@@ -73,7 +76,7 @@ function extractData (data) {
     game: game
   }
 
-  console.log(barMenu);
+  //console.log(barMenu);
   //console.log(beer);
 
   beer.forEach(function (beer) {
