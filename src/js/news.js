@@ -27,7 +27,7 @@ function extractNews (news) {
     </div>
     <article class="blog">${blog}</article>
     `;
-    console.log("HTML String", newsHTML);
+    // console.log("HTML String", newsHTML);
     $(".box4").append(newsHTML);
 
 };

@@ -143,11 +143,12 @@ header {
       .newsTitle {
         font-weight: bold;
         font-size:1em;
-
+//news title: date
         span {
           padding-left:18px;
         }
       }
+//news title body
       .blog {
         font-size:12px;
       }
@@ -156,7 +157,7 @@ header {
 
 
 
-//ourStory / Menu / Reservations
+//latest News / Specials/ locations
     .box4, .box5 , .box6 {
       border:1px solid grey;
       width:325px;
@@ -181,37 +182,77 @@ header {
 .lower {
   margin-left:40px;
   margin-right:40px;
-  margin-top:20px
-}
-  .box7 {
-    display: flex;
-    justify-content: center;
-  }
+  margin-top:20px;
 
+//the accordian tabs /// story/menu/res/games
+  .box7 {
+    display:flex;
+    justify-content:center;
+
+//inside box7
     .tabs {
+      display: block;
       border: 1px solid lightgrey;
       margin-left:40px;
       margin-right:20px;
       width:800px;
       min-height:500px;
+        .title {
+          font:25px bold black;
+          text-align:center;
+        }
+        #storyTab {
+          background-color:lightyellow;
+            p {
+              font-size:10px;
+            }
+            img {
+              height:200px;
+              width:auto;
+              border:none;
+            }
+        }
+        #menuTab  {
+          background-color: lightgrey;
+            .content-menu {
+              font-size:10px;
+            }
+        }
+        #reservationsTab {
+          background-color:lightpurple;
+              .content-reservations {
+
+              }
+
+        }
+        #gamesTab {
+          background-color:lightgreen;
+            .content-games {
+              font-size:10px;
+            }
+        }
     }
-      .storyTab {
-        font: 25px bold black;
-        text-align: center;
-      }
-      .menuTab  {
-        font: 25px bold black;
-        text-align: center;
-      }
-      .reservationsTab {
-        font: 25px bold black;
-        text-align: center;
-      }
-    aside {
+  }
+  .box8 {
+      height:250px;
       width:250px;
       margin-right:40px;
       border:1px solid lightgrey;
-    }
+   }
+}
+.switchTab {
+  display: none;
+}
+.tab {
+  overflow:hidden;
+  max-height: 100px;
+
+  transition:max-height 1.0s ease-in-out;
+
+}
+
+
+
 
 //footer (of course)
 footer::before {
@@ -227,11 +268,11 @@ footer {
   height:50px;
   // background-color: lightseagreen;
   color:red;
-  font-size: 11px;
-  margin-top: 11px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 200;
-  line-height: 4;
+  font-size:11px;
+  margin-top:11px;
+  font-family:'Open Sans Condensed', sans-serif;
+  font-weight:200;
+  line-height:4;
   }
 
 
