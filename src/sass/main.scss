@@ -19,11 +19,12 @@ body {
   height: 100%;
   width: 100%;
   background-image: url("http://htc-wallpaper.com/wp-content/uploads/2013/10/metal-texture21.jpg?982602");
+  background-size: cover;
 }
 .container {
   // width: 1000px;
   background: rgba(192,192,192, 0.6);
-  margin: 5% 5%;
+  margin: 3% 5%;
 }
 
 header {
@@ -257,7 +258,9 @@ header {
 
 }
 
-
+.none {
+  display: none;
+}
 
 
 //footer (of course)
