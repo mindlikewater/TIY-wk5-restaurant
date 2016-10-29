@@ -184,6 +184,7 @@ header {
   margin-left:40px;
   margin-right:40px;
   margin-top:20px;
+  border:1px solid grey;
 
 //the accordian tabs /// story/menu/res/games
   .box7 {
@@ -198,10 +199,12 @@ header {
       margin-right:20px;
       width:800px;
       min-height:500px;
-        .title {
-          font:25px bold black;
-          text-align:center;
-        }
+
+
+        // .title {
+        //   font:25px bold black;
+        //   text-align:center;
+        // }
         #storyTab {
           background-color:lightyellow;
             p {
@@ -235,10 +238,10 @@ header {
     }
   }
   .box8 {
-      height:250px;
       width:250px;
       margin-right:40px;
-      border:1px solid lightgrey;
+      border:1px solid darkgreen;
+      background-color: teal;
    }
 }
 .switchTab {
