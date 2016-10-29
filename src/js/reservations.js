@@ -23,7 +23,6 @@ function submit (event) {
 
   if (event.target.id==="button") {
     $(".content-reservations").html(confirm);
-    $(".content-reservations").toggleClass(".none");
   }
 };
 
