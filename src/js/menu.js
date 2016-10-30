@@ -44,6 +44,19 @@ function getEntrees (entree) {
     <div class="description">${entree.description}</div>
   </div>`;
 
+  if (entree.allergies === 1) {
+    $(".description").addClass("allergy");
+  }
+  if (entree.favorite === 1) {
+    $(".description").addClass("fav");
+  }
+  if (entree.spicy === 1) {
+    $(".description").addClass("spicy");
+  }
+  if (entree.vegan === 1) {
+    $(".description").addClass("vegan");
+  }
+
   //console.log(entreeHTML);
   $(".content-menu").append(entreeHTML);
 };
@@ -56,6 +69,13 @@ function getBeers (beer) {
     <div class="description">${beer.description}</div>
   </div>`;
 
+  if (beer.favorite === 1) {
+    $(".description").addClass("fav");
+  }
+  if (beer.allergies === 1) {
+    $(".description").addClass("allergy");
+  }
+
   //console.log(beerHTML);
   $(".beer-menu").append(beerHTML);
 };
@@ -67,7 +87,6 @@ function getGames (game) {
     <div class="games">${game.item}<span class="price">$${game.price}</span></div>
     <div class="description">${game.description}</div>
     <div class="description">Console/Device: ${game.platform} Rated: ${game.rating}</div>
-
   </div>`;
 
   $(".content-games").append(gameHTML);
@@ -116,7 +135,6 @@ function specialNow (item) {
           <div class="menuItem" id=${x.id} data-allergies=${x.allergies} data-favorite=${x.favorite} data-spicy=${x.spicy} data-vegan=${x.vegan}>
             <div class="food">${x.item}<span class="price">$${x.price}</span></div>
             <div class="description">${x.description}</div>
-
           </div>`;
 
         $(".box5food").append(specialHTML);
