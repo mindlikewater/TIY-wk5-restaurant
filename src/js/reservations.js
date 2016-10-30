@@ -19,7 +19,7 @@ function getReservations () {
 function submit (event) {
   event.preventDefault();
   var confirm = `
-    <div class="confirmation">Thank you for your reservation! We look forward to serve you.</div`;
+    <div class="confirmation">Thank you for your reservation! We look forward to seeing you soon.</div`;
 
   if (event.target.id==="button") {
     $(".content-reservations").html(confirm);
