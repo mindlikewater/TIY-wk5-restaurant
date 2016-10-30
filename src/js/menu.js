@@ -81,10 +81,30 @@ function getEntrees (entree) {
 
 //generate html for each beer
 function getBeers (beer) {
+  if (beer.allergies === 1) {
+    var allergy = `
+    <div class="allergy">
+    <span class="entypo-flash">
+      Warning: This item may contain shellfish, milk, egg, nuts, soy, wheat, or other commonly allergic item.
+    </div>`;
+  } else {
+    allergy = "";
+  }
+  if (beer.favorite === 1) {
+    var fav = `<div class="fav"><span class="entypo-heart"></span>This is a local favorite!</div>`;
+  } else {
+    fav = "";
+  }
+  if (beer.draught === 1) {
+    var tap = `<div class="fav"><span class="entypo-cup"></span>Currently on tap</div>`;
+  } else {
+    tap = "";
+  }
   var beerHTML =
-  `<div class="menuItem" id=${beer.id} data-allergies=${beer.allergies} data-favorite=${beer.favorite} data-bottle=${beer.bottle} data-draught=${beer.draught}>
+  `<div class="menuItem" id=${beer.id}>
     <div class="beer">${beer.item} (${beer.abv}% ABV) - ${beer.style}<span class="price">$${beer.price}</span></div>
     <div class="description">${beer.description}</div>
+    <div class="menuIcons">${allergy} ${fav} ${tap}</div>
   </div>`;
 
   //console.log(beerHTML);
