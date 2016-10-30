@@ -31,45 +31,43 @@ function menuData (item) {
     game: game
   }
   //for each property of barMenu, write html for each individual item
-  beer.forEach(getBeers);
   entree.forEach(getEntrees);
+  beer.forEach(getBeers);
   game.forEach(getGames);
-};
-
-//generate html for each beer
-function getBeers (beer) {
-  var beerHTML =
-  `<div class="menuItem" id=${beer.id} data-allergies=${beer.allergies} data-favorite=${beer.favorite} data-bottle=${beer.bottle} data-draught=${beer.draught}>
-    <div class="beer">Beer: ${beer.item} (${beer.abv}% ABV) - ${beer.style}</div>
-    <div class="description">Description: ${beer.description}</div>
-    <div class="price">$${beer.price}</div>
-  </div>`;
-
-  //console.log(beerHTML);
-  $(".content-menu").append(beerHTML);
 };
 
 //generate html for each entree
 function getEntrees (entree) {
   var entreeHTML =
   `<div class="menuItem" id=${entree.id} data-allergies=${entree.allergies} data-favorite=${entree.favorite} data-spicy=${entree.spicy} data-vegan=${entree.vegan}>
-    <div class="food">Entree: ${entree.item}</div>
-    <div class="description">Description: ${entree.description}</div>
-    <div class="price">$${entree.price}</div>
+    <div class="food">${entree.item}<span class="price">$${entree.price}</span></div>
+    <div class="description">${entree.description}</div>
   </div>`;
 
   //console.log(entreeHTML);
   $(".content-menu").append(entreeHTML);
 };
 
+//generate html for each beer
+function getBeers (beer) {
+  var beerHTML =
+  `<div class="menuItem" id=${beer.id} data-allergies=${beer.allergies} data-favorite=${beer.favorite} data-bottle=${beer.bottle} data-draught=${beer.draught}>
+    <div class="beer">${beer.item} (${beer.abv}% ABV) - ${beer.style}<span class="price">$${beer.price}</span></div>
+    <div class="description">${beer.description}</div>
+  </div>`;
+
+  //console.log(beerHTML);
+  $(".beer-menu").append(beerHTML);
+};
+
 //generate html for each game
 function getGames (game) {
   var gameHTML =
   `<div class="menuItem" id=${game.id} data-favorite=${game.favorite} data-online=${game.online} data-multiplayer=${game.multiplayer}>
-    <div class="games">Games: ${game.item}</div>
-    <div class="description">Description: ${game.description}</div>
+    <div class="games">${game.item}<span class="price">$${game.price}</span></div>
+    <div class="description">${game.description}</div>
     <div class="description">Console/Device: ${game.platform} Rated: ${game.rating}</div>
-    <div class="price">$${game.price}</div>
+
   </div>`;
 
   $(".content-games").append(gameHTML);
@@ -82,7 +80,7 @@ function specialTemplate (pic) {
   //console.log(picSize);
   var picHTML = `<img src="${picSize}">`;
   //console.log(picHTML);
-  $(".box5").append(picHTML);
+  $(".box5Img").append(picHTML);
 };
 
 //send request to flickr's api
@@ -116,12 +114,12 @@ function specialNow (item) {
       if (x.id === dailySpecialID) {
         var specialHTML = `
           <div class="menuItem" id=${x.id} data-allergies=${x.allergies} data-favorite=${x.favorite} data-spicy=${x.spicy} data-vegan=${x.vegan}>
-            <div class="food">Entree: ${x.item}</div>
-            <div class="description">Description: ${x.description}</div>
-            <div class="price">$${x.price}</div>
+            <div class="food">${x.item}<span class="price">$${x.price}</span></div>
+            <div class="description">${x.description}</div>
+
           </div>`;
 
-        $(".box5").append(specialHTML);
+        $(".box5food").append(specialHTML);
       }
     });
   });

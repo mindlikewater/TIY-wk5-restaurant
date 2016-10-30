@@ -11,8 +11,16 @@ import { getMenu, menuData, specialNow } from "./menu";
 
 getNewsData();          //get news data from AJAX request
 
+
+/////////////////////////////////////
+////////////////map/////////////////
+/////////////////////////////////////
  var map = $(".box6");  //holds box where map is located on the page
- map.html(mapHTML);     //puts map html on the page
+ map.append(mapHTML);     //puts map html on the page
+
+
+
+
 
 //calls function to get flickr images
 getImages();
