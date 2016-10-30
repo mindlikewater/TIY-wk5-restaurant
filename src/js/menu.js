@@ -38,24 +38,29 @@ function menuData (item) {
 
 //generate html for each entree
 function getEntrees (entree) {
+
+  if (entree.allergies === 1) {
+    var allergy = `
+    <div class="allergy">
+      This item may contain shellfish, milk, nuts, soy, wheat, or other commonly allergic item.
+    </div>`;
+  }
+  if (entree.favorite === 1) {
+    var fav = `<div class="fav">This is a local favorite!</div>`;
+  }
+  if (entree.spicy === 1) {
+    var spicy = `<div class="spicy">Warning: Too hot to handle!</div>`;
+  }
+  if (entree.vegan === 1) {
+    var vegan = `<div class="vegan">Vegetarian-friendly</div>`;
+  }
+
   var entreeHTML =
   `<div class="menuItem" id=${entree.id} data-allergies=${entree.allergies} data-favorite=${entree.favorite} data-spicy=${entree.spicy} data-vegan=${entree.vegan}>
     <div class="food">${entree.item}<span class="price">$${entree.price}</span></div>
     <div class="description">${entree.description}</div>
+    <div class="menuIcons">${allergy} ${fav} ${spicy} ${vegan}</div>
   </div>`;
-
-  if (entree.allergies === 1) {
-    $(".description").addClass("allergy");
-  }
-  if (entree.favorite === 1) {
-    $(".description").addClass("fav");
-  }
-  if (entree.spicy === 1) {
-    $(".description").addClass("spicy");
-  }
-  if (entree.vegan === 1) {
-    $(".description").addClass("vegan");
-  }
 
   //console.log(entreeHTML);
   $(".content-menu").append(entreeHTML);
@@ -68,13 +73,6 @@ function getBeers (beer) {
     <div class="beer">${beer.item} (${beer.abv}% ABV) - ${beer.style}<span class="price">$${beer.price}</span></div>
     <div class="description">${beer.description}</div>
   </div>`;
-
-  if (beer.favorite === 1) {
-    $(".description").addClass("fav");
-  }
-  if (beer.allergies === 1) {
-    $(".description").addClass("allergy");
-  }
 
   //console.log(beerHTML);
   $(".beer-menu").append(beerHTML);
