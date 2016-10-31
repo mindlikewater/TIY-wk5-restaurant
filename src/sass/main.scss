@@ -13,8 +13,6 @@
     width: $size;
 }
 
-
-
 * {
   margin:0;
   box-sizing: border-box;
@@ -43,18 +41,7 @@ header {
 }
 
   .header-left {
-    // border:1px solid lightblue;
     display: flex;
-    // height:115px;
-    // width: 210px;
-    //
-    // // display: block;
-    // margin:0;
-    // padding:0px;
-    // float: left;
-    // background-color:white;
-    // margin-top:15px;
-
   }
       img.logo {
       height: auto;
@@ -71,13 +58,6 @@ header {
       line-height: 5.4;
       text-align: center;
     }
-    // .logoText:hover {
-    //   font-size: 95px;
-    //   transform: rotate(180deg);
-    //   transition: 1s;
-    // }
-
-
     .header-right {
       display:flex;
       align-items: center;
@@ -184,40 +164,35 @@ header {
 //latest News / Specials/ locations
     .box4, .box5 , .box6 {
       border:1px solid grey;
+      background: rgba(34, 34, 34, 0.27);
       width:325px;
-      height:240px;
+      height:250px;
       margin-right: 15px;
       padding-left:10px;
       padding-right:10px;
       padding-bottom:10px;
       text-align: justify;
-      overflow: scroll;
-      text-overflow: ellipsis;
-
     }
 
+    .box4 {
+      overflow: scroll;
+      text-overflow: ellipsis;
+    }
+//specials
     .box5 {
         img {
           margin-left:10%;
         }
       .menuItem {
-        font-size:14px;
+        font-size:11px;
         word-spacing: 1px;
+
+          .food, .beer {
+              font-weight: bold;
+            }
           span {
             float:right;
           }
-        .entypo-flash:before {
-            font-family: 'entypo', sans-serif;
-        }
-        .entypo-heart:before {
-            font-family: 'entypo', sans-serif;
-        }
-        .entypo-leaf:before {
-            font-family: 'entypo', sans-serif;
-        }
-        .entypo-cup:before {
-            font-family: 'entypo', sans-serif;
-        }
       }
     }
 
@@ -227,6 +202,7 @@ header {
   margin-left:40px;
   margin-right:40px;
   margin-top:20px;
+  width:1000px;
 
 //the accordian tabs /// story/menu/res/games
   .box7 {
@@ -238,7 +214,7 @@ header {
       display: block;
       margin-left:40px;
       margin-right:20px;
-      width:800px;
+      width:700px;
       min-height:400px;
 
 
@@ -250,14 +226,14 @@ header {
             border-top:1px solid black;
           }
           .title:hover {
-            background-color: black;
+            background: rgba(34, 34, 34, 0.27);
             color:white;
           }
         #storyTab {
           padding:10px;
           text-align: justify;
             p {
-              font-size:14px;
+              font-size:18px;
               line-height: 24px;
               word-spacing: 2px;
             }
@@ -265,8 +241,7 @@ header {
               height:400px;
               width:auto;
               border:none;
-              margin-left:20%;
-              margin-right:34%;
+              margin-left:11%;
             }
         }
         #menuTab  {
@@ -300,6 +275,17 @@ header {
                   span {
                     float:right;
                   }
+//food icons
+                  .entypo-flash:before {
+                      font-family: 'entypo', sans-serif;
+                  }
+                  .entypo-heart:before {
+                      font-family: 'entypo', sans-serif;
+                  }
+                  .entypo-leaf:before {
+                      font-family: 'entypo', sans-serif;
+                  }
+
                 }
             }
 
@@ -309,9 +295,8 @@ header {
           padding:10px;
           line-height: 2;
           word-wrap: 0px;
-          margin-left: 18px;
+          margin-left: 5px;
           margin-top: 40px;
-          margin-right: 400px;
 
               .content-reservations {
 
@@ -329,6 +314,10 @@ header {
               .menuItem {
                 margin-top:15px;
                 margin-bottom: 15px;
+                  .games {
+                      font-weight: bold;
+                    }
+
 
                   span {
                       float:right;
@@ -338,6 +327,16 @@ header {
         }
     }
   }
+
+  .beerIcon {
+    height:16px;
+    width: 14px;
+  }
+.tab {
+  background: rgba(34, 34, 34, 0.27);
+  margin-top: 40px;
+}
+
 /////////////////
 //we should work on the hover, and add something where the current tab goes to
 //border-bottom: white;"
@@ -399,3 +398,9 @@ footer {
 footer ::after {
   content:"\00a9 2016 Brews on Board";
 }
+
+
+// /* fontawesome */
+// .fontawesome-beer:before {
+//   font-family: 'FontAwesome', sans-serif;
+// }

@@ -25,7 +25,7 @@ function extractNews (news) {
       ${title}
       <span>${date}</span>
     </div>
-    <article class="blog">${blog}</article>
+    <article class="blog">${blog} <a href="https://json-data.herokuapp.com/restaurant/news/1">...Read more</a></article>
     `;
     // console.log("HTML String", newsHTML);
     $(".box4").append(newsHTML);
