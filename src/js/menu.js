@@ -96,7 +96,7 @@ function getBeers (beer) {
     fav = "";
   }
   if (beer.draught === 1) {
-    var tap = `<div class="fav"><span class="entypo-cup"></span>Currently on tap</div>`;
+    var tap = `<div class="fav"><img class="beerIcon" id="onTap" src="/images/beerIcon.svg">Currently on tap</div>`;
   } else {
     tap = "";
   }
