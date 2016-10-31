@@ -72,7 +72,7 @@ function getEntrees (entree) {
   `<div class="menuItem" id=${entree.id}>
     <div class="food">${entree.item}<span class="price">$${entree.price}</span></div>
     <div class="description">${entree.description}</div>
-    <div class="menuIcons">${allergy} ${fav} ${spicy} ${vegan}</div>
+    <div class="hide menu-icons">${allergy} ${fav} ${spicy} ${vegan}</div>
   </div>`;
 
   //console.log(entreeHTML);
@@ -104,7 +104,7 @@ function getBeers (beer) {
   `<div class="menuItem" id=${beer.id}>
     <div class="beer">${beer.item} (${beer.abv}% ABV) - ${beer.style}<span class="price">$${beer.price}</span></div>
     <div class="description">${beer.description}</div>
-    <div class="menuIcons">${allergy} ${fav} ${tap}</div>
+    <div class="hide menu-icons">${allergy} ${fav} ${tap}</div>
   </div>`;
 
   //console.log(beerHTML);

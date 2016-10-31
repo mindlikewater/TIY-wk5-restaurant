@@ -1,4 +1,4 @@
-@import url(http://weloveiconfonts.com/api/?family=brandico|entypo|zocial);
+@import url("http://weloveiconfonts.com/api/?family=brandico|entypo|zocial");
 
 @mixin icon ($size){
     color:white;
@@ -11,6 +11,14 @@
 @mixin iconClick ($size){
     height: $size;
     width: $size;
+}
+
+.hide {
+  visibility: hidden;;
+}
+
+.menuItem:hover .hide {
+  visibility: visible;
 }
 
 * {
@@ -398,9 +406,3 @@ footer {
 footer ::after {
   content:"\00a9 2016 Brews on Board";
 }
-
-
-// /* fontawesome */
-// .fontawesome-beer:before {
-//   font-family: 'FontAwesome', sans-serif;
-// }
