@@ -1,10 +1,10 @@
-@import url("http://weloveiconfonts.com/api/?family=brandico|entypo|zocial");
+@import url(http://weloveiconfonts.com/api/?family=brandico|entypo|zocial);
 
 @mixin icon ($size){
-    color:white;
+    color:black;
     height: $size;
     width: $size;
-    background-color:black;
+    background-color:white;
     border:none;
     border-radius: 4px;
 }
@@ -86,7 +86,7 @@ header {
           }
 
           button.entypo-facebook, button.zocial-twitter, button.brandico-instagram {
-            @include icon (32px)
+            @include icon (32px);
           }
 
           .zocial-twitter:hover{
@@ -102,6 +102,7 @@ header {
           }
           .entypo-facebook:hover{
             background-color:#111cc8;
+            color: white;
             transition: 0.5s;
           }
 
