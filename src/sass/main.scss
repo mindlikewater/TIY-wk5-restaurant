@@ -1,24 +1,11 @@
-@import url("https://weloveiconfonts.com/api/?family=brandico|entypo|zocial");
-/* brandico */
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
-
-/* entypo */
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
-}
-
-/* zocial */
-[class*="zocial-"]:before {
-  font-family: 'zocial', sans-serif;
-}
+//@import url("https://weloveiconfonts.com/api/?family=brandico|entypo|zocial");
 
 @mixin icon ($size){
-    color:black;
+    color: white;
     height: $size;
     width: $size;
-    background-color:white;
+    text-align: center;
+    background: black;
     border:none;
     border-radius: 4px;
 }
@@ -43,7 +30,7 @@
 body {
   height: 100%;
   width: 100%;
-  background-image: url("https://htc-wallpaper.com/wp-content/uploads/2013/10/metal-texture21.jpg?982602");
+  background-image: url("http://htc-wallpaper.com/wp-content/uploads/2013/10/metal-texture21.jpg?982602");
   background-size: cover;
 }
 .container {
@@ -85,36 +72,33 @@ header {
       align-items: center;
     }
 
-          /* entypo/Facebook */
-          .entypo-facebook:before {
-            font-family: 'entypo', sans-serif;
+          // .entypo-facebook:before {
+          //   font-family: 'entypo', sans-serif;
+          // }
+          // .zocial-twitter:before {
+          //   font-family: 'zocial', sans-serif;
+          // }
+          // .brandico-instagram:before {
+          //   font-family: 'brandico', sans-serif;
+          // }
+
+          .fa-facebook, .fa-twitter, .fa-instagram {
+            padding-top: 4px;
+            @include icon (40px);
           }
 
-          /* zocial /Twitter */
-          .zocial-twitter:before {
-            font-family: 'zocial', sans-serif;
-          }
-          /* brandico /Instagram*/
-          .brandico-instagram:before {
-            font-family: 'brandico', sans-serif;
-          }
-
-          button.entypo-facebook, button.zocial-twitter, button.brandico-instagram {
-            @include icon (32px);
-          }
-
-          .zocial-twitter:hover{
+          .fa-twitter:hover{
             color: #0eebf2;
-            background: none;
+            background: white;
             transition: 0.5s;
           }
-          .brandico-instagram:hover{
+          .fa-instagram:hover{
             color: #dd3412;
-            background: none;
+            background: white;
             transition: 0.5s;
 
           }
-          .entypo-facebook:hover{
+          .fa-facebook:hover{
             background-color:#111cc8;
             color: white;
             transition: 0.5s;
